@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #060c0f;
+    color: #eeeae2;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+body::before{
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(#8fa6b8 0.8px, transparent 0.8px);
+    background-size: 28px 28px;
+    opacity: 0.12;
+    pointer-events: none;
+}
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 0;
+}
+.tiny-symbol {
+    font-size: 1.5rem;
+    color: #91aabd;
+}
+.live-clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#clock {
+    font-size: 0.9rem;
+    letter-spacing: 0.12em;
+}
+#clock-status {
+    font-size: 0.55rem;
+    letter-spacing: 0.2em;
+    color: #91aabd;
+}

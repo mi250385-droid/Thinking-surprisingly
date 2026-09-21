@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Still thinking, unfortunately</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="stars"></div>
+        <main class="page">
+            <header class="top-bar">
+                <div class="tiny-symbol">✦</div>
+                <div class="live-clock">
+                    <span id="clock">03:17 A.M.</span>
+                    <span id="clock-status">SHOULD BE ASLEEP</span>
+                </div>
+            </header>
+            <section class="hero">
+                <div class="left-column">
+                    <p class="eyebrow-raise">AN ARCHIVE OF AFTER-MIDNIGHT THOUGHTS</p>
+                    <h1>
+                        Thinking,<br>
+                        Unfortunately.
+                    </h1>
+                    <p class="subtitle">
+                        Thoughts that force you to sit up at 3 a.m.
+                    </p>
+                    <p class="description">
+                        Some thoughts are better left unresolved.
+                        The brain has other plans.
+                    </p>
+                    <form id="thought-form">
+                        <label for="thought-input">
+                            ENTER A THOUGH <span>(IF YOU WANT)</span>
+                        </label>
+                        <div class="input-box">
+                            <textarea
+                            id="thought-input"
+                            maxlength="180"
+                            placeholder="Why did I say 'you too' after the waiter wished me Happy Birthday last year?"
+                            required></textarea>
+                            <button type="submit" id="submit-button">
+                                ↗
+                            </button>
+                        </div>
+                        <div class="status-area">
+                            <p>STATUS</p>
+                            <div class="status-option">
+                                <label class="status-option">
+                                    <input
+                                    type="radio"
+                                    name="status"
+                                    value="unresolved"
+                                    checked>
+                                    <span>UNRESOLVED</span>
+                                </label>
+                                <label class="status-option">
+                                    <input
+                                    type="radio"
+                                    name="status"
+                                    value="resolved">
+                                    <span>RESOLVED</span>
+                                </label>
+                                <label class="status-option">
+                                    <input
+                                    type="radio"
+                                    name="status"
+                                    value="needs caffeine">
+                                    <span>NEEDS CAFFEINE</span>
+                                </label>
+                            </div>
+                        </div>
+                        <p id="form-message"></p>
+                    </form>
+                </div>
+                <div class="right-column">
+                    <article class="thought-card card-one">
+                        <div class="card-top">
+                            <span>FROM THE ARCHIVE</span>
+                            <span id="thought-number-one">#000</span>
+                        </div>
+                        <p id="random-thought-one">
+                            Loading though...
+                        </p>
+                        <div class="card-bottom">
+                            <span id="time-one">
+                                03:17 A.M.
+                            </span>
+                            <span id="status-one">
+                                UNRESOLVED
+                            </span>
+                        </div>
+                    </article>
+                    <article class="thought-card card-two">
+                        <div class="card-top">
+                            <span>FROM THE ARCHIVES</span>
+                            <span id="thought-number-two">#000</span>
+                        </div>
+                        <p id="random-thought-two">
+                            Loading thought...
+                        </p>
+                        <div class="card-bottom">
+                            <span id="time-two">
+                                03:17 A.M.
+                            </span>
+                            <span id="status-two">
+                                NEEDS CAFFEINE
+                            </span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <footer>
+                <span id="archive-count">
+                    ARCHIVE: LOADING
+                </span>
+                <span>
+                    SOME THINGS HAVE NO BUSINESS BEING QUESTIONED
+                </span>
+            </footer>
+        </main>
+        <script src="ABC"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

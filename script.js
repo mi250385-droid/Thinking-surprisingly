@@ -47,3 +47,21 @@ function updateClock() (
     ${String(displayHours).padStart(2, "0")}:${minutes}:${seconds} ${period} ;
     updateClockStatus(hours);
 )
+function updateClockStatus(hours) {
+    if (hourse >= 0 && hours < 3) {
+        clockStatus.textContent =
+        "YOU SHOULD PROBABLY BE SLEEPING";
+    }
+    else if (hours >= 3 && hours < 5) {
+        clockStatus.textContent =
+        "BRAIN IS TOO LOUD";
+    }
+    else if (hours >= 5 && hours < 8) {
+        clockStatus.textContent =
+        "THIS WAS PROBABLY A MISTAKE...ANYWAYS";
+    }
+    else if (hours >= 8 && hours < 12) {
+        clockStatus.textContent =
+        "JUST PRETENDING TO BE PRODUCTIVE";
+    }
+}

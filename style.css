@@ -115,3 +115,161 @@ h1 {
     border-color: #91aabd;
     box-shadow: 0 0 0 1px #91aabd;
 }
+textarea {
+    flex: 1;
+    resize: none;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 22px;
+    color: #eeeae2;
+    font-family: inherit;
+    line-height: 1.5;    
+}
+textarea::placeholder {
+    color: #65676b;
+}
+#submit-button {
+    width: 65px;
+    border: none;
+    background: #91aabd;
+    color: #0b0c0f;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+#submit-button:hover {
+    background: #eeeae2;
+}
+.status-area {
+    margin-top: 20px;
+}
+.status-area > p {
+    fonr-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: #777;
+    margin-bottom: 10px;
+}
+.status-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.status-option input {
+    display: none;
+}
+.status-option span {
+    display: inline-block;
+    padding: 8px 13px;
+    border: 1px solid #3a3c40;
+    border-radius: 30px;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    color: #888;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.status-option input:checked + span {
+    background: #91aabd;
+    border-color: #91aabd;
+    color: #0b0c0f;
+}
+#form-message {
+    min-height: 20px;
+    margin-top: 15px;
+    font-size: o.7rem;
+    color: #91aabd;
+}
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.thought-card {
+    min-height: 270px;
+    border: 1px solid #383a3e;
+    border-radius: 22px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-button;
+    transition: transform 0.4s ease;
+    background: linear-gradient(135deg,
+    rgba(145,170,189,0.08),
+    rgba(93, 35, 50, 0.08));
+}
+.card-one {
+    transform: rotate(1deg);
+}
+.card-two {
+    transform: rotate(-1.5deg);
+}
+.thought-card:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+.card-top,
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.card-top span,
+.card-bottom span {
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+    color: #777;
+}
+.thought-card p {
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+#status-one,
+#status-two {
+    color: #91aabd;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #292b2e;
+    padding: 20px 0;
+    font-size: 0.55rem;
+    letter-spacing: 0.12em;
+    color: #666;
+}
+@media (max-width: 850px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    h1 {
+        font-size: clamp(4rem, 18vw, 7rem);
+    }
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .right-column {
+        max-width: 650px;
+    }
+}
+@media (max-width: 500px) {
+    .top-bar {
+        padding: 20px 0;
+    }
+    .page {
+        width: 88%;
+    }
+    .live-clock {
+        display: none;
+    }
+    .hero {
+        padding-top: 40px;
+    }
+    .input-box {
+        min-height: 150px;
+    }
+    .thought-card {
+        min-height: 230px;
+    }
+}

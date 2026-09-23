@@ -1,8 +1,8 @@
-const SUPABASE_URL = "URL";
-const SUPABASE_KEY = "KEY";
-const supabaseClient = window.supabase.creatClient(
-    URL,
-    KEY
+const SUPABASE_URL = "https://hiwgxngqfudkczowyesw.supabase.co";
+const SUPABASE_KEY = "sb_publishable_co92sS-3uhIvbhE27lGQjg_l6T4pa67";
+const supabaseClient = window.supabase.createClient(
+    SUPABASE_URL,
+    SUPABASE_KEY
 );
 const thoughtForm = document.getElementyById("thought-form");
 const thoughtInput = document.getElementyById("thought-input");

@@ -4,36 +4,39 @@ const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
-const thoughtForm = document.getElementyById("thought-form");
-const thoughtInput = document.getElementyById("thought-input");
-const formMessage = document.getElementyById("form-message");
+const thoughtForm = document.getElementById("thought-form");
+const thoughtInput = document.getElementById("thought-input");
+const formMessage = document.getElementById("form-message");
 const randomThoughtOne = 
-document.getElementyById("random-thought-one");
+document.getElementById("random-thought-one");
 const randomThoughtTwo =
-document.getElementyById("random-thought-two");
+document.getElementById("random-thought-two");
 const timeOne =
-document.getElementyById("time-one");
+document.getElementById("time-one");
 const timeTwo =
-document.getElementyById("time-two");
+document.getElementById("time-two");
 const statusOne =
-document.getElementyById("status-one");
+document.getElementById("status-one");
 const statusTwo =
-document.getElementyById("status-two");
+document.getElementById("status-two");
 const thoughtNumberOne =
-document.getElementyById("thought-number-one");
+document.getElementById("thought-number-one");
 const thoughtNumberTwo =
-document.getElementyById("thought-number-two");
+document.getElementById("thought-number-two");
 const archiveCount =
-document.getElementyById("archive-count");
+document.getElementById("archive-count");
 const clock =
-document.getElementyById("clock");
+document.getElementById("clock");
 const clockStatus =
-document.getElementyById("clock-status");
-function updateClock() (
+document.getElementById("clock-status");
+function updateClock() {
     const now = new Date();
-    let hours = now.getHouse();
+    let hours = now.getHours();
     const minutes = String(
         now.getMinutes()
+    ).padStart(2, "0");
+    const seconds = String(
+        now.getSeconds()
     ).padStart(2, "0");
     let period = "A.M.";
     if (hours >= 12) {
@@ -46,7 +49,7 @@ function updateClock() (
     clock.textContent =
     `${String(displayHours).padStart(2, "0")}:${minutes}:${seconds} ${period}`;
     updateClockStatus(hours);
-)
+}
 function updateClockStatus(hours) {
     if (hourse >= 0 && hours < 3) {
         clockStatus.textContent =
@@ -156,7 +159,7 @@ thoughtForm.addEventListener(
             return;
         }
         const submitButton =
-        document.getElementyById(
+        document.getElementById(
             "submit-button"
         );
         submitButton.disabled = true;

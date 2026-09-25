@@ -51,7 +51,7 @@ function updateClock() {
     updateClockStatus(hours);
 }
 function updateClockStatus(hours) {
-    if (hourse >= 0 && hours < 3) {
+    if (hours >= 0 && hours < 3) {
         clockStatus.textContent =
         "YOU SHOULD PROBABLY BE SLEEPING";
     }
